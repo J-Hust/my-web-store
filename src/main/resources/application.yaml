@@ -1,3 +1,11 @@
 spring:
   application:
     name: webstore
+  datasource:
+    url: "jdbc:postgresql://localhost/webstore"
+    username: "jhust"
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
