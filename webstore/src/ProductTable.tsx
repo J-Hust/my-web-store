@@ -1,7 +1,7 @@
-import { type Product } from './products'
+import { type Product } from "./products";
 
 interface ProductTableProps {
-  products: Product[]
+  products: Product[];
 }
 
 function ProductTable({ products }: ProductTableProps) {
@@ -20,7 +20,7 @@ function ProductTable({ products }: ProductTableProps) {
         ))}
       </tbody>
     </table>
-  )
-};
+  );
+}
 
 export default ProductTable;
