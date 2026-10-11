@@ -10,7 +10,7 @@ export async function fetchProducts(signal: AbortSignal): Promise<Product[]> {
     throw new Error(`Could not load products (${response.status})`)
   }
 
-  return (await response.json()) as Product[]
+  return (await response.json()) as Product[] // TODO: Use zod to validate the response from the server
 }
 
 export async function createProduct(name: string): Promise<Product> {
@@ -24,5 +24,5 @@ export async function createProduct(name: string): Promise<Product> {
     throw new Error(`Could not create product (${response.status})`)
   }
 
-  return (await response.json()) as Product
+  return (await response.json()) as Product // TODO: Use zod to validate the response from the server
 }
