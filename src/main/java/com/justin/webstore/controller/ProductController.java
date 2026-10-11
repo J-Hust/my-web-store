@@ -23,7 +23,7 @@ public class ProductController {
     }
 
     @PostMapping
-    @ResponseStatus (HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED)
     public Product createProduct(@RequestBody CreateProductRequest request) {
         return productRepository.save(new Product(request.name()));
     }
