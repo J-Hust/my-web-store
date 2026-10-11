@@ -4,7 +4,7 @@ export interface Product {
 }
 
 export async function fetchProducts(signal: AbortSignal): Promise<Product[]> {
-  const response = await fetch('/products', { signal })
+  const response = await fetch('/api/products', { signal })
 
   if (!response.ok) {
     throw new Error(`Could not load products (${response.status})`)
@@ -14,7 +14,7 @@ export async function fetchProducts(signal: AbortSignal): Promise<Product[]> {
 }
 
 export async function createProduct(name: string): Promise<Product> {
-  const response = await fetch('/products', {
+  const response = await fetch('/api/products', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name }),
